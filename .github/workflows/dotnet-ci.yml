@@ -27,7 +27,7 @@ jobs:
       run: dotnet build SalesTax.sln --configuration Release --no-restore
 
     - name: Test
-      run: dotnet test SalesTaxTests/SalesTaxTests.csproj --no-build --verbosity normal
+      run: dotnet test SalesTaxTests/SalesTaxTests.csproj --verbosity normal
 
     - name: Publish
       run: dotnet publish SalesTax/SalesTax.csproj --configuration Release --output ./publish
