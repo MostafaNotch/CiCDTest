@@ -31,3 +31,9 @@ jobs:
 
     - name: Publish
       run: dotnet publish SalesTax/SalesTax.csproj --configuration Release --output ./publish
+      
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: sales-tax-artifact
+        path: ./publish
